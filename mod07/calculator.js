@@ -1,6 +1,6 @@
 class Calculator {
   add(x, y) {
-    return x + y;
+    return (+x) + (+y);
   }
 
   subtract(x, y) {
