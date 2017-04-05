@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<testsuites errors="0"
+            failures="0"
+            tests="2">
+
+  <testsuite name="add.test"
+    errors="0" failures="0" hostname="" id="" package="add.test" skipped="0"
+    tests="2" time="8.515" timestamp="Wed, 05 Apr 2017 09:28:00 GMT">
+  
+    <testcase name="Add 100 plus 200" classname="add.test" time="4.646" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+    <testcase name="Add 200 plus 200" classname="add.test" time="3.869" assertions="2">
+
+    
+
+    
+    </testcase>
+  
+  
+  </testsuite>
+</testsuites>

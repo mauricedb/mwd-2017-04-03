@@ -1,0 +1,20 @@
+{
+  "name": "mod08",
+  "version": "1.0.0",
+  "description": "",
+  "main": "calculator.js",
+  "directories": {
+    "test": "tests"
+  },
+  "scripts": {
+    "pretest":"node ./install",
+    "test": "nightwatch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "nightwatch": "^0.9.14",
+    "selenium-download": "^2.0.9"
+  }
+}
