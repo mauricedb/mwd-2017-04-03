@@ -2,7 +2,7 @@ exports[`test Counter renders correctly 1`] = `
 <div>
   <button
     className="btn btn-default"
-    onClick={[Function]}>
+    onclick={[Function]}>
     Click the button
   </button>
 </div>
