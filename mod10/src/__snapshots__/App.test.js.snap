@@ -1,0 +1,8 @@
+exports[`test Counter renders correctly 1`] = `
+<div>
+  <button
+    onClick={[Function]}>
+    Click me...
+  </button>
+</div>
+`;
