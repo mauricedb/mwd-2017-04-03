@@ -13,18 +13,18 @@ const DisplayCount = ({count}) => (
 class AddCount extends Component {
   constructor(){
     super();
-    this.add = this.add.bind(this);
+    this.increment = this.increment.bind(this);
   }
 
-  add() {
-    this.props.add();
+  increment() {
+    this.props.increment();
   }
   render() {
     const {count} = this.props  ;
     return (
       <div>
         Count = {count}
-        <button onClick={this.add}>Add</button>
+        <button onClick={this.increment}>Add</button>
       </div>
     );
   }
@@ -36,10 +36,10 @@ class App extends Component {
     this.state = {
       count:0
     };
-    this.add = this.add.bind(this);
+    this.increment = this.increment.bind(this);
   }
 
-  add() {
+  increment() {
     this.setState({count: this.state.count + 1})
   }
   render() {
@@ -54,7 +54,7 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <AddCount count={count} add={this.add}/>
+        <AddCount count={count} increment={this.increment}/>
         <DisplayCount count={count} />
       </div>
     );
