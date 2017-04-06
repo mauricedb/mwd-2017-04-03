@@ -2,25 +2,59 @@ import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-const DisplayCount = ({count}) => (
-  <div>
-    Count = {count}
-  </div>
-);
 
+const createIncrement = () => ({type: 'increment-count'});
+
+const store = {
+   count:10,
+   otherCount: 1
+};
+
+const listener = [];
+
+const dispatch = action => {
+  switch (action.type){
+    case 'increment-count':
+      store.count++;
+      break;
+  }
+
+  console.log(store)
+  listener.forEach(l => l.forceUpdate())
+}
+
+class DisplayCountPresenation extends Component {
+  render() {
+    var count = this.props.countToDisplay;
+    return (
+      <div>
+        Count = {count}
+      </div>
+    );
+  }
+}
+
+class DisplayCountControler extends Component
+{
+  componentDidMount(){
+    listener.push(this);
+  }
+  render(){
+    return <DisplayCountPresenation countToDisplay={store.count} />
+  }  
+}
 
 
 class AddCount extends Component {
-  constructor(){
-    super();
-    this.increment = this.increment.bind(this);
+  componentDidMount(){
+    listener.push(this);
   }
-
   increment() {
-    this.props.increment();
+    var action = createIncrement();
+    dispatch(action)
   }
   render() {
-    const {count} = this.props  ;
+    const {count} = store;
     return (
       <div>
         Count = {count}
@@ -31,20 +65,7 @@ class AddCount extends Component {
 }
 
 class App extends Component {
-  constructor(){
-    super();
-    this.state = {
-      count:0
-    };
-    this.increment = this.increment.bind(this);
-  }
-
-  increment() {
-    this.setState({count: this.state.count + 1})
-  }
   render() {
-    const {count} = this.state;
-
     return (
       <div className="App">
         <div className="App-header">
@@ -54,8 +75,8 @@ class App extends Component {
         <p className="App-intro">
           To get started, edit <code>src/App.js</code> and save to reload.
         </p>
-        <AddCount count={count} increment={this.increment}/>
-        <DisplayCount count={count} />
+        <AddCount />
+        <DisplayCountControler />
       </div>
     );
   }
