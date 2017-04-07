@@ -1,0 +1,195 @@
+$margin-default: 36px;
+$well-color: lightgreen;
+
+@import '_reset.scss';
+
+h1 {
+    font-size: 2rem;
+}
+
+html {
+    font-family: sans-serif;
+    -ms-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+a {
+    background-color: transparent;
+}
+
+button {
+    color: inherit;
+    font: inherit;
+    margin: 0;
+}
+
+button {
+    overflow: visible;
+}
+
+button {
+    text-transform: none;
+}
+
+body > .container > .well {
+
+}
+
+button {
+    -webkit-appearance: button;
+}
+
+button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+}
+
+*,
+:after,
+:before {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+button {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a {
+    color: #337ab7;
+    text-decoration: none;
+}
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+h4 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h4 {
+    margin-top: $margin-default;
+    margin-bottom: $margin-default;
+}
+
+h4 {
+    font-size: 1.5 * $margin-default;
+}
+
+p {
+    margin: 0 0 $margin-default;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: $margin-default;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+@media (min-width: 768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+.collapse {
+    display: none;
+}
+
+.well {
+    min-height: 20px;
+    padding: 19px;
+    margin-bottom: 20px;
+    background-color: $well-color;
+    border: 1px solid darken($well-color, 24%);
+    border-radius: 4px;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
+}
+
+.clearfix:after,
+.clearfix:before,
+.container:after,
+.container:before,
+.row:after,
+.row:before {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after,
+.container:after,
+.row:after {
+    clear: both;
+}
+
+
+body {
+    .container {
+        .row {
+            font-size: 80px;
+
+            .col-md-8 {
+
+            }
+        }
+
+        .well {
+                background-color: green;
+
+                &:hover {
+                     background-color: yellow;
+                }
+        }
+    }
+}
+
+body > .container > .row {
+}
+
+
+
+body > .container > .well.row {
+
+}
