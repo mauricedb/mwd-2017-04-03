@@ -14,7 +14,7 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nightwatch": "^0.9.14",
+    "nightwatch": "^1.0.19",
     "selenium-download": "^2.0.9"
   }
 }
